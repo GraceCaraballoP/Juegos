@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego ahorcado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    <script type="text/javascript" src="JavaScript/ahorcado.js"></script>
+</head>
+<body onload="cargaJson()">
+    <div id="navBar" class="bg-light bg-opacity-75">
+        <ul class="nav justify-content-between m-2 align-items-center">
+            <li class="nav-item">
+                <label class="active h4">Puntos: </label>
+                <label id="puntuacion" class="active h4"></label>
+            </li>
+            <li class="nav-item">
+                <label class="active h4">Ronda: </label>
+                <label id="numRonda" class="active h4"></label>
+            </li>
+            <li class="nav-item">
+                <label class="active h4">Usuario: </label>
+                <label id="nombreJugador" class="active h4"></label>
+            </li>
+        </ul>
+    </div>
+    <div class="container text-center"> 
+        <div id="partida" class="row">
+            <div class="col partida">
+                <div class="row peliculas my-4">
+                    <label class="fs-1" id="pelicula"></label>
+                </div>
+                <div id="acierto" class="row gap-5">
+                    <div class="row">
+                        <img id="portada" class="col-4" style="display: none;"/>
+                        <div id="descripcion" class="col fs-5 fw-normal bg-light bg-opacity-75 rounded-3 p-3" style="display: none;">
+                            <div >
+                                <label class="fw-bold">Año:</label>
+                                <label id="anio">
+                            </div>
+                            <div>
+                                <label class="fw-bold">Director/es:</label>
+                                <label id="director">
+                            </div>
+                            <div>
+                                <label class="fw-bold">Sinopsis:</label>
+                                <label id="sinopsis">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <button id="proxJugador" type="button" class="col oculto" onclick="proximoJugador()">Siguiente Jugador</button>
+                        <button id="proxRonda" type="button" class="col oculto" onclick="nuevaPartida(parseInt(localStorage.getItem('rondaActual'))+1,localStorage.getItem('jugadorActual'))">Siguiente Ronda</button>
+                        <button id="ultimaRonda" type="button" class="col oculto" onclick="verPuntuaciones()">Puntuaciones totales</button>
+                    </div>
+                </div>
+                <div id="botones">
+                    <div class="col d-flex justify-content-center m-2 flex-wrap">
+                        <?php
+                            
+                        ?>
+                        <button id="LetraA" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('A')">A</button>
+                        <button id="LetraB" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('B')">B</button>
+                        <button id="LetraC" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('C')">C</button>
+                        <button id="LetraD" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('D')">D</button>
+                        <button id="LetraE" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('E')">E</button>
+                        <button id="LetraF" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('F')">F</button>
+                        <button id="LetraG" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('G')">G</button>
+                        <button id="LetraH" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('H')">H</button>
+                        <button id="LetraI" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('I')">I</button>
+                        <button id="LetraJ" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('J')">J</button>
+                        <button id="LetraK" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('K')">K</button>
+                        <button id="LetraL" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('L')">L</button>
+                        <button id="LetraM" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('M')">M</button>
+                        <button id="LetraN" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('N')">N</button>
+                        <button id="LetraÑ" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('Ñ')">Ñ</button>
+                        <button id="LetraO" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('O')">O</button>
+                        <button id="LetraP" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('P')">P</button>
+                        <button id="LetraQ" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('Q')">Q</button>
+                        <button id="LetraR" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('R')">R</button>
+                        <button id="LetraS" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('S')">S</button>
+                        <button id="LetraT" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('T')">T</button>
+                        <button id="LetraU" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('U')">U</button>
+                        <button id="LetraV" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('V')">V</button>
+                        <button id="LetraW" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('W')">W</button>
+                        <button id="LetraX" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('X')">X</button>
+                        <button id="LetraY" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('Y')">Y</button>
+                        <button id="LetraZ" name="btn" type="submit" class="btn btn1 m-1" onclick="validaLetra('Z')">Z</button>
+                    </div>
+                </div>
+            </div>
+            <div  id="canvas" class="oculto">
+                <canvas id="myCanvas">
+                </canvas>
+            </div>
+        </div>
+        <div id="puntajes" class="oculto">
+            <div class="col">
+                <table id="puntosFinales" class="m-auto table bg-light bg-opacity-75">
+                    <tr>
+                        <th>Jugador</th>
+                        <th>Puntuación Final</th>
+                        <!--th>Victorias</th-->
+                    </tr>
+                </table>
+            </div>
+            <div id="ganador" style="display: none;">
+
+            </div>
+            <div>
+                <button id="nuevaPartida" type="button" class="btn btn3 my-5" style="display: none;"onclick="iniciarPartida()">Nueva Partida</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

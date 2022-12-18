@@ -1,0 +1,148 @@
+{
+    "peliculas" : [
+        {
+            "nombre":"BAMBI",
+            "imagen":"imagenes/portadas/peliculas/bambi.png",
+            "anio":"1942",
+            "sinopsis":"Un joven ciervo llamado Bambi descubre los valores de la vida en su camino hacia la edad adulta. Lo acompañarán sus nuevos amigos, Tambor, el conejo juguetón; Flor, la tímida y adorable mofeta; y su sabio amigo el Búho.",
+            "director":"Clyde Geronimi, David Hand"
+        },
+        {
+            "nombre":"BRAVE",
+             "imagen":"imagenes/portadas/peliculas/brave.png",
+             "anio":"2012",
+             "sinopsis":"Merida es una joven arquera, hija del rey Fergus y de la reina Elinor. Decidida a forjar su propio camino en la vida, Merida desafía una antigua costumbre de los señores de la tierra, desencadenando el caos en el reino.",
+             "director":"Brenda Chapman, Mark Andrews"
+        },
+        {
+            "nombre":"DUMBO",
+             "imagen":"imagenes/portadas/peliculas/dumbo.png",
+             "anio":"1985",
+             "sinopsis":"Dumbo es un bebé elefante de un circo que nace con unas enormes orejas. Se transforma en la principal estrella del circo cuando descubre que, usando sus orejas, es capaz de volar.",
+             "director":"Ben Sharpsteen, Norm Ferguson, Wilfred Jackson, Samuel Armstrong, Bill Roberts, Jack Kinney, John Elliotte"
+        },
+        {
+            "nombre":"EL LIBRO DE LA SELVA",
+             "imagen":"imagenes/portadas/peliculas/libro_selva.png",
+             "anio":"1967",
+             "sinopsis":"Mowgli se encuentra dividido entre dos mundos. El cachorro humano vive ahora en un poblado con otros seres humanos donde descubre lo que significa el amor de una familia pero echa de menos a su querido amigo Baloo.",
+             "director":"Wolfgang Reitherman"
+        },
+        {
+            "nombre":"LA BELLA DURMIENTE",
+             "imagen":"imagenes/portadas/peliculas/bella.png",
+             "anio":"1960",
+             "sinopsis":"Había una vez dos reyes que olvidaron invitar a la malvada bruja Maléfica al cumpleaños de su hija Aurora. Maléfica, enfurecida, lanzó un terrible hechizo sobre la princesa.",
+             "director":" Wolfgang Reitherman, Clyde Geronimi, Eric Larson, Les Clark"
+        },
+        {
+            "nombre":"LA CENICIENTA",
+             "imagen":"imagenes/portadas/peliculas/cenicienta.png",
+             "anio":"1952",
+             "sinopsis":"Cenicienta vive con su madrastra y sus dos hijas, quienes la obligan a realizar todas las tareas del hogar. Mientras tanto, en palacio, los reyes deciden organizar un baile real, al que Cenicienta no puede asistir, hasta que llega su hada madrina.",
+             "director":"Clyde Geronimi, Wilfred Jackson, Hamilton Luske"
+        },
+        {
+            "nombre":"LA DAMA Y EL VAGABUNDO",
+             "imagen":"imagenes/portadas/peliculas/dama.png",
+             "anio":"1997",
+             "sinopsis":"La historia clásica animada de Walt Disney, sobre un romance entre una perrita mimada y un perro vagabundo.",
+             "director":"Wilfred Jackson, Hamilton Luske, Clyde Geronimi"
+        },
+        {
+            "nombre":"MULAN",
+            "imagen":"imagenes/portadas/peliculas/mulan.png",
+            "anio":"1998",
+            "sinopsis":"El ejército de los Hunos, encabezado por el malvado Shun Yiu, quiere conquistar China. El emperador, para impedírselo, ha mandado a filas a todos los varones con el fin de proteger el imperio. Por otra parte, Mulán es una chica joven y valiente que vive en una aldea.",
+            "director":"Tony Bancroft, Barry Cook"
+        },
+        {
+            "nombre":"PETER PAN",
+             "imagen":"imagenes/portadas/peliculas/peter_pan.png",
+             "anio":"2003",
+             "sinopsis":"Wendy Darling lee a sus hermanos menores cuentos sobre el Capitán Garfio. Peter Pan, que adora los relatos de Wendy, viaja desde muy lejos para oírlos. Esa noche comienza la gran aventura de Wendy y sus hermanos en el País de Nunca Jamás.",
+             "director":"P. J. Hogan"
+        },
+        {
+            "nombre":"PINOCHO",
+             "imagen":"imagenes/portadas/peliculas/pinocho.png",
+             "anio":"1940",
+             "sinopsis":"Cuando el carpintero Geppetto ve una estrella fugaz, desea que el títere que acaba de terminar, Pinocho, pueda convertirse en un niño de verdad.",
+             "director":" Hamilton Luske, Wilfred Jackson, Ben Sharpsteen, Bill Roberts, Norm Ferguson, T. Hee, Jack Kinney"
+        }
+    ],
+
+    "series" : [
+        {
+            "nombre":"FUTURAMA",
+            "imagen":"imagenes/portadas/series/futurama.png",
+            "anio":"1999",
+            "sinopsis":"Serie de dibujos animados creada por Matt Groening para Fox, dónde su primer capítulo fue emitido en 1999. Cuenta las aventuras de Fry un repartidor de pizza congelada, que accidentalmente se despierta 1000 años en el futuro. Él es recibido por su único descendiente, un científico anciano y débil que es dueño de un servicio de despacho de carga. Entre otros miembros del elenco están: el capitán Leela, el contador Hermes, la novata Amy, el robot fastidioso Bender y el gorrón que parece una langosta, Dr. Zoidberg.",
+            "director":"Matt Groening, David X. Cohen"
+        },
+        {
+            "nombre":"BOB ESPONJA",
+            "imagen":"imagenes/portadas/series/bob_esponja.png",
+            "anio":"1999",
+            "sinopsis":"Serie de dibujos animados creada por Nickelodeon, dónde su primer capítulo fue emitido en 1999. Cuenta las aventuras de Bob que es una esponja marina cuadrada y amarilla que junto a su mejor amigo Patricio tienen muchas aventuras en el Fondo de Bikini, la ciudad en la que viven, en el fondo del mar.",
+            "director":"Stephen Hillenburg"
+        },
+        {
+            "nombre":"DAVID EL GNOMO",
+            "imagen":"imagenes/portadas/series/david_gnomo.png",
+            "anio":"1986",
+            "sinopsis":"Serie de dibujos animados creada por BRB Internacional, dónde su primer capítulo fue emitido en 1985. Cuenta las divertidas aventuras de unos pequeños gnomos, amantes de la naturaleza. Un viaje por el mundo para aprender cómo respetar los secretos de la naturaleza siguiendo los sabios consejos de David.",
+            "director":" Claudio Biern Boyd, BRB Internacional, Luis Ballester"
+        },
+        {
+            "nombre":"HORA DE AVENTURAS",
+            "imagen":"imagenes/portadas/series/hora_aventura.png",
+            "anio":"2010",
+            "sinopsis":"Serie de dibujos animados creada por Cartoon Netwoks, dónde su primer capítulo fue emitido en 2010. Cuenta las aventuras de Finn, un niño que lucha contra el mal en la Tierra de Ooo, ayudado por su canino mágico Jake.",
+            "director":"Pendleton Ward"
+        },
+        {
+            "nombre":"LOS SIMPSON",
+            "imagen":"imagenes/portadas/series/simpson.png",
+            "anio":"1989",
+            "sinopsis":"Serie de dibujos animados creada por Matt Groening para Fox, dónde su primer capítulo fue emitido en 1989. Cuenta la vida de la familia Simpson, que viven en la ciudad de Springfield, y está compuesta por Homero que hace lo mejor para poder liderar a su familia, la matriarca amorosa Marge, el hijo agitador Bart, la hija aplicada Lisa y la bebé Maggie.",
+            "director":" Matt Groening, Dan Castellaneta"
+        },
+        {
+            "nombre":"LOS PADRINOS MAGICOS",
+            "imagen":"imagenes/portadas/series/padrinos.png",
+            "anio":"2001",
+            "sinopsis":"Serie de dibujos animados creada por Nickelodeon, dónde su primer capítulo fue emitido en 2001. Cuenta como los padrinos mágicos de Timmy le conceden deseos.",
+            "director":"Butch Hartman"
+        },
+        {
+            "nombre":"EL LABORATORIO DE DEXTER",
+            "imagen":"imagenes/portadas/series/dexter.png",
+            "anio":"1996",
+            "sinopsis":"Serie de dibujos animados creada por Cartoon Netwoks, dónde su primer capítulo fue emitido en 1996. Cuenta las hazañas de Dexter un pequeño superdotado que transformó su habitación en un increíble laboratorio. Allí realiza todo tipo de experimentos extraños, pero todo está bajo control, o al menos si su hermana Dee Dee no aparece.",
+            "director":"Genndy Tartakovsky"
+        },
+        {
+            "nombre":"LAS SUPERNENAS",
+            "imagen":"imagenes/portadas/series/supernenas.png",
+            "anio":"1998",
+            "sinopsis":"Serie de dibujos animados creada por Cartoon Netwoks, dónde su primer capítulo fue emitido en 1998. Cuenta como tres niñas accidentalmente creadas en un laboratorio por un científico, luchan contra los malhechores en Saltadilla.",
+            "director":"Craig McCracken, Lauren Faust, Paul Rudish"
+        },
+        {
+            "nombre":"JIMMY NEUTRON",
+            "imagen":"imagenes/portadas/series/neutron.png",
+            "anio":"2002",
+            "sinopsis":"Serie de dibujos animados creada por Nickelodeon, dónde su primer capítulo fue emitido en 2002. Cuenta como un niño genio usa sus inventos fantásticos para combatir villanos.",
+            "director":"John A. Davis"
+        },
+        {
+            "nombre":"CORAJE EL PERRO COBARDE",
+            "imagen":"imagenes/portadas/series/coraje.png",
+            "anio":"1996",
+            "sinopsis":"Serie de dibujos animados creada por Cartoon Netwoks, dónde su primer capítulo fue emitido en 1996. Cuenta las historias de Coraje un perro muy miedoso que debe proteger a sus amos, Muriel y don Justo, de situaciones paranormales y la presencia de alienígenas mal intencionados.",
+            "director":"John R. Dilworth"
+        }
+    ]
+ 
+}

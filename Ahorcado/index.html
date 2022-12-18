@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego ahorcado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    <script type="text/javascript" src="JavaScript/inicio.js"></script>
+</head>
+<body>
+    <div class="d-flex flex-column align-items-center justify-content-between">
+        <div>
+            <h1 class="title">Juego del ahorcado</h1>
+        </div>
+        <div>
+            <form action="" class="form gap-3">
+                <label class="fs-2" for="numJugadores">Numero de jugadores:</label>
+                <select id="numJugadores">
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+                <button type="button"  class="btn btn3" onclick="cargaFormulario();">Genera Partida</button>
+            </form>
+        </div>
+        <div class="mt-5">
+            <button class="btn btn4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Información sobre el juego</button>
+
+            <div class="offcanvas offcanvas-end offcanvasmod" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header rosa">
+                    <h5 id="offcanvasRightLabel">Juego del ahoracado</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul>
+                        <li>Este ahorcado es de series y películas de dibujos animados.</li>
+                        <li>Dispones de 10 intentos para resolver la palabra/s, en caso de no resolverla no puntuarás en esa ronda.</li>
+                        <li>Dispones de un total de 1000 puntos por ronda, cada fallo restará 100 puntos.</li>
+                        <li>Puedes jugar un mínimo de 1 randa y un máximo de 10 rondas.</li>
+                        <li>Puede jugar uno o dos jugadores.</li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
