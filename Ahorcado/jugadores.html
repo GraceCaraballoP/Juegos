@@ -19,20 +19,22 @@
                 <div>Datos de la partida</div>   
             </div>
             <div class="row">
-                <form class="bg-light bg-opacity-75">
-                    <div id="jug1" class="d-flex flex-wrap">
+                <form class="bg-light bg-opacity-75 d-flex flex-wrap flex-column">
+                    <div id="jug1" class="m-3">
                         <label for="jugador1" class="fs-4">Nombre del jugador1:</label>
                         <input type="text" name="jugador1" id="jugador1" pattern="[0-9A-Za-z]{3,7}">
                     </div>
-                    <div id="jug2" class="d-flex flex-wrap">
+                    <div id="jug2" class="m-3">
                         <label for="jugador2" class="fs-4">Nombre del jugador2:</label>
                         <input type="text" name="jugador2" id="jugador2" pattern="[0-9A-Za-z]{3,7}">
                     </div>
-                    <div id="numPartidas" class="d-flex flex-wrap">
+                    <div id="numPartidas" class="m-3">
                         <label for="rondas" class="fs-4">Número de rondas:</label>
                         <input type="number" class="text-center fw-bold anchoRondas" name="rondas" id="rondas" min="1" max="10" value="5">
                     </div>
-                    <button type="button" class="btn btn3 m-3" onclick="generaPartida()">Nueva Partida</button>
+                    <div>
+                        <button type="button" class="btn btn3 m-3" onclick="generaPartida()">Nueva Partida</button>
+                    </div>
                 </form>
             </div>
         </div>

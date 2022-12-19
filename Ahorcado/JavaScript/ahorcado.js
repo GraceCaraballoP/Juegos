@@ -279,56 +279,36 @@ function proximoJugador(){
  * Crea una tabla con las puntuaciones finales de los jugadores y se la muestra al usuario
  */
 function verPuntuaciones(){
-    let puntosJ1=localStorage.getItem('puntosJug1');
+    let puntosJ1=parseInt(localStorage.getItem('puntosJug1'));
     let puntosFinales=document.getElementById("puntosFinales");
     let divPuntajes=document.getElementById("puntajes");
     let botonUltimaRonda=document.getElementById("ultimaRonda");
     let partida=document.getElementById("partida");
     let barraNav=document.getElementById("navBar");
-    let victoriasJ1,victoriasJ2;
     barraNav.style.display="none";
     partida.className="oculto"
     botonUltimaRonda.className="oculto";
     divPuntajes.className="row visible";
 
     if(numJugadores!=1){
-
-        let puntosJ2=localStorage.getItem('puntosJug2');
+        let puntosJ2=parseInt(localStorage.getItem('puntosJug2'));
         let ganador=document.getElementById("ganador");
         ganador.style.display="inline";
+
+        console.log("p1:"+puntosJ1+" , p2: "+puntosJ2);
+
         if(puntosJ1>puntosJ2){
             ganador.innerHTML="La partida la ha ganado: "+nombreJ1 ;
-            victoriasJ1=parseInt(localStorage.getItem('victoriasJ1'));
-            if(victoriasJ1!=null){
-                localStorage.setItem('victoriasJ1',victoriasJ1+1)
-            }else{
-                localStorage.setItem('victoriasJ1',1)    
-            }
-        }else if(puntosJ2>puntosJ1){
+        }else if(puntosJ1<puntosJ2){
             ganador.innerHTML="La partida la ha ganado: "+nombreJ2 ;
-            victoriasJ2=parseInt(localStorage.getItem('victoriasJ2'));
-            if(victoriasJ1!=null){
-                localStorage.setItem('victoriasJ2',victoriasJ2+1)
-            }else{
-                localStorage.setItem('victoriasJ2',1)
-            }
         }else{
-            ganador.innerHTML=nombreJ1+" y "+nombreJ2+" han empatado la partida y no suman victorias.";
+            ganador.innerHTML=nombreJ1+" y "+nombreJ2+" han empatado la partida.";
         }
-        victoriasJ2=localStorage.getItem('victoriasJ2');
-        if(victoriasJ2==null){
-            victoriasJ2=0;
-        }
-        let filaJug2=creaFila(nombreJ2,puntosJ2,parseInt(victoriasJ2));
+        let filaJug2=creaFila(nombreJ2,puntosJ2);
         puntosFinales.appendChild(filaJug2);
     }
 
-    victoriasJ1=localStorage.getItem('victoriasJ1');
-    if(victoriasJ1==null){
-        victoriasJ1=0;
-    }
-
-    let filaJug1=creaFila(nombreJ1,puntosJ1,parseInt(victoriasJ1));
+    let filaJug1=creaFila(nombreJ1,puntosJ1);
     puntosFinales.appendChild(filaJug1);
 
     let nuevaPartida=document.getElementById("nuevaPartida");
@@ -346,13 +326,10 @@ function creaFila(jugador,puntuacion){
     let tr=document.createElement("tr");
     let td1=document.createElement("td");
     let td2=document.createElement("td");
-    //let td3=document.createElement("td");
     td1.appendChild(document.createTextNode(jugador));
     td2.appendChild(document.createTextNode(puntuacion));
-   // td3.appendChild(document.createTextNode(victorias));
     tr.appendChild(td1);
     tr.appendChild(td2);
-    //tr.appendChild(td3);
     
     return tr;
 }

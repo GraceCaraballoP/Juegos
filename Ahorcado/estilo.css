@@ -3,6 +3,7 @@ body{
     font-size: xx-large;
     background-image: url(imagenes/fondo.png);
     background-size: 100% 100vh;
+    text-align: center;
 }
 
 .rosa{
@@ -84,7 +85,7 @@ input{
   height: 50px;
   border-radius: 25px;
   line-height: 25px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .btn-close{
@@ -119,3 +120,13 @@ select{
     min-height: 300px;
 }
 
+
+@media screen and (max-width: 768px){
+  body{
+    font-weight: 900;
+    font-size: xx-large;
+    background-image: url(imagenes/fondo2.png);
+    background-size: 100% 100vh;
+    text-align: center;
+  }
+}
