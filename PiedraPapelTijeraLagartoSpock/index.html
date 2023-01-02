@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra-Papel-Tijera-Lagarto-Spock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    <script type="text/javascript" src="JavaScript/inicio.js"></script>
+</head>
+<body>
+    <div class="d-flex flex-column align-items-center justify-content-between">
+        <div>
+            <h1 class="title text-center">Juego de<br>Piedra-Papel-Tijera-Lagarto-Spock </h1>
+        </div>
+        <div>
+            <form action="" class="form gap-3 bg-light bg-opacity-75 m-4">
+                <div class="row mb-3 text-center">
+                    <div>Datos de la partida</div>   
+                </div>
+                <div class="row d-flex flex-wrap justify-content-center">
+                    <div id="jug" class="text-center">
+                        <label for="jugador" class="fs-4">Nombre del jugador:</label>
+                        <input type="text" name="jugador" id="jugador" pattern="[0-9A-Za-z]{3,7}">
+                    </div>
+                    <div id="numPartidas" class="text-center">
+                        <label for="rondas" class="fs-4">Número de rondas:</label>
+                        <input type="number" class="text-center fw-bold anchoRondas" name="rondas" id="rondas" min="1" max="10" value="5">
+                    </div>
+                    <button type="button" class="btn btn3 m-3" onclick="generaPartida()">Genera Partida</button>
+                    
+                </div>
+            </form>
+        </div>
+        <div class="mt-5">
+            <button class="btn btn4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Información sobre el juego</button>
+
+            <div class="offcanvas offcanvas-end offcanvasmod" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header verde">
+                    <h5 id="offcanvasRightLabel">Juego de Piedra, Papel, Tijera, Lagarto o Spock </h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul>
+                        <li>Este juego es para un solo jugador contra la máquina.</li>
+                        <li>Puedes jugar un mínimo de 1 ronda y un máximo de 10 rondas.</li>
+                        <li>Por cada ronda ganada acumulas una victoria, si no ganas no acumulas victorias pero tampoco pierdes las que tenías acumuladas.</li>
+                        <li>En la siguiente imagen podrás ver quien gana a quien: <br> <img src="./imagenes/jerarquia.png" alt="Jerarquía de quien vence a quien en el juego" width="100%"></li>
+                        <li>Es decir: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Piedra gana a: Tijera y Lagarto. <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Papel gana a: Piedra y Spock. <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Tijera gana a: Papel y Lagarto. <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Lagarto gana a: Papel y Spock. <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Spock gana a: Piedra y Tijera. <br>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

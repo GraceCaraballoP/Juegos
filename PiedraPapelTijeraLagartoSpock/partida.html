@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra-Papel-Tijera-Lagarto-Spock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    <script type="text/javascript" src="JavaScript/juego.js"></script>
+</head>
+<body onload="nuevaPartida()">
+    <div id="navBar" class="bg-light bg-opacity-75">
+        <ul class="nav justify-content-between m-2 align-items-center">
+            <li class="nav-item">
+                <label class="active h4">Victorias: </label>
+                <label id="victorias" class="active h4"></label>
+            </li>
+            <li class="nav-item">
+                <label class="active h4">Ronda: </label>
+                <label id="numRonda" class="active h4"></label>
+            </li>
+            <li class="nav-item">
+                <label class="active h4">Usuario: </label>
+                <label id="nombreJugador" class="active h4"></label>
+            </li>
+        </ul>
+    </div>
+    <div class="container text-center"> 
+        <div id="partida" class="row">
+            <div class="col partida">
+                <div id="botones">
+                    <div class="col d-flex justify-content-center m-2 flex-wrap">
+                        <button id="piedra" name="btn" type="submit" class="btn btn1 m-1 cont" style="display: inline;" onclick="juega('piedra')"><img src="./imagenes/piedra.png" alt="Piedra" width="150px"><div class="encima">Piedra</div></button>
+                        <button id="papel" name="btn" type="submit" class="btn btn1 m-1 cont" style="display: inline;" onclick="juega('papel')"><img src="./imagenes/papel.png" alt="Papel" width="150px"><div class="encima">Papel</div></button>
+                        <button id="tijera" name="btn" type="submit" class="btn btn1 m-1 cont" style="display: inline;" onclick="juega('tijera')"><img src="./imagenes/tijera.png" alt="Tijera" width="150px"><div class="encima">Tijera</div></button>
+                        <button id="lagarto" name="btn" type="submit" class="btn btn1 m-1 cont" style="display: inline;" onclick="juega('lagarto')"><img src="./imagenes/lagarto.png" alt="Lagarto" width="150px"><div class="encima">Lagarto</div></button>
+                        <button id="spock" name="btn" type="submit" class="btn btn1 m-1 cont" style="display: inline;" onclick="juega('spock')"><img src="./imagenes/spock.png" alt="Spock" width="150px"><div class="encima">Spock</div></button>
+                    </div>
+                </div>
+                <div id="resultado" style="display: none;">
+                    <div  class="col">
+                        <table id="resultadoRonda" class="m-auto table bg-light bg-opacity-75">
+                        
+                        </table>
+                    </div>
+                    <div id="resultadoRondaTexto" class="m-auto">
+
+                    </div>
+                </div>
+                <div id="jugado" class="row gap-5" style="display: none;">
+                    <div class="row justify-content-center">
+                        <button id="proxRonda" type="button" class="btn btn2" style="display: none;" onclick="nuevaPartida(parseInt(localStorage.getItem('rondaActual'))+1)">Siguiente Ronda</button>
+                        <button id="ultimaRonda" type="button" class="btn btn2"  style="display: none;" onclick="verVictorias()">Victorias totales</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="puntajes" class="row m-3" style="display: none;">
+            <div class="col">
+                <table id="victoriasTotales" class="m-auto table bg-light bg-opacity-75">
+                    <tr>
+                        <th>Jugador</th>
+                        <th>Rondas</th>
+                        <th>Victorias</th>
+                    </tr>
+                </table>
+            </div>
+            <div id="ganador" style="display: none;">
+
+            </div>
+            <div>
+                <button id="nuevaPartida" type="button" class="btn btn3 my-5" style="display: none;"onclick="iniciarPartida()">Nueva Partida</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
