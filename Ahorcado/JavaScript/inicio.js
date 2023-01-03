@@ -1,22 +1,4 @@
 /**
- * La función muestra toma un parámetro, `id` del elemento que quiere mostrar.
- * @param id - El ID del elemento que desea mostrar.
- */
-function muestra(id) {
-    let campo=document.getElementById(id);
-    campo.className = "visible"; 
-}
-
-/**
- * La función oculta toma un parámetro, `id` del elemento que quiere ocultar.
- * @param id - El ID del elemento que desea ocultar.
- */
-function oculta(id) {
-    let campo=document.getElementById(id);
-    campo.className = "oculto"; 
-}
-
-/**
  * Toma el valor del campo de entrada y lo almacena en el almacenamiento local
  * y redirige a jugadores.html
  */
@@ -31,15 +13,15 @@ function cargaFormulario(){
  */
 function inicioSesion(){
     let numJug=localStorage.getItem('numJugadores');
-    oculta('jug2');
-    muestra('formularioJugador');
-    console.log(numJug)
+    let jug2=document.getElementById('jug2');
+    let formularioJugador=document.getElementById('formularioJugador');
+    
     if(numJug==1){
-        oculta('jug2');
-        muestra('formularioJugador');
+        jug2.style.display="none";
+        formularioJugador.style.display="inline";
     }else{
-        muestra('jug2');
-        muestra('formularioJugador');
+        jug2.style.display="inline";
+        formularioJugador.style.display="inline";
     }
 }
 

@@ -1,5 +1,5 @@
 let palabras, palabra, nombrePalabra;
-let imagen, anio, sinopsis, director;
+let imagen, titulo, anio, sinopsis, director;
 let tipo;
 let errores=0;
 let puntaje=1000;
@@ -54,11 +54,13 @@ function nuevaPartida(ronda=1,jugadorActual=nombreJ1){
     let proximoJugador=document.getElementById("proxJugador");
     let botones=document.getElementById("botones");
     let botonLetras=document.getElementsByName("btn");
-    acierto.className="oculto";
-    proxRonda.className="oculto";
-    ultimaRonda.className="oculto";
-    proximoJugador.className="oculto";
-    botones.className="visible";
+
+    acierto.style.display="none";
+    proxRonda.style.display="none";
+    ultimaRonda.style.display="none";
+    proximoJugador.style.display="none";
+    botones.style.display="inline";
+
     for(i=0;i<botonLetras.length;i++){
         botonLetras[i].style.display="inline"
     }
@@ -150,7 +152,7 @@ function validaLetra(letra){
             generaCanvas();                                                    
             return true;
         }else{
-            canvas.className="visible col-3 canva"
+            canvas.style.display="inline"
             errores++;
             console.log("Llevas "+errores+" errores de 10");
             campoLetra.style.display="none";
@@ -167,12 +169,12 @@ function validaLetra(letra){
         let botonUltimaRonda=document.getElementById("ultimaRonda");
         
         if(numJugadores==2 && jugadorActual==nombreJ2){
-            botonUltimaRonda.className="btn btn2 visible";
+            botonUltimaRonda.style.display="inline";
         }else if(numJugadores==2 ){
             let botonSiguienteJugador=document.getElementById("proxJugador"); 
-            botonSiguienteJugador.className="btn btn2 visible";
+            botonSiguienteJugador.style.display="inline";
         }else{
-            botonUltimaRonda.className="btn btn2 visible";
+            botonUltimaRonda.style.display="inline";
         } 
     }else{
         let botonSiguienteRonda=document.getElementById("proxRonda");
@@ -182,7 +184,7 @@ function validaLetra(letra){
             localStorage.setItem('rondaActual',parseInt(rondaActual));
         }
 
-        botonSiguienteRonda.className="btn btn2 visible";
+        botonSiguienteRonda.style.display="inline";
     }
         errores=0;
         puntaje=1000;
@@ -197,24 +199,25 @@ function muestraDatos(){
     let botones=document.getElementById("botones");
     let portada=document.getElementById("portada");
     let descripcion=document.getElementById("descripcion");
+    let divTitulo=document.getElementById("titulo");
     let divAnio=document.getElementById("anio");
     let divDirector=document.getElementById("director");
     let divSinopsis=document.getElementById("sinopsis");
     
-    botones.className="oculto"
-    canvas.className="oculto"
+    botones.style.display="none"
+    canvas.style.display="none"
     portada.style.display="inline"
     descripcion.style.display="inline"
     descripcion.style.textAlign="justify"
 
+    divTitulo.innerText=palabra;
     divAnio.innerText=anio;
     divDirector.innerText=director;
     divSinopsis.innerText=sinopsis;
     portada.setAttribute("src",imagen);
-    portada.height=300;
 
     let acierto=document.getElementById("acierto");
-    acierto.className="row gap-5"
+    acierto.style.display="inline"
 }
 
 /**
@@ -231,16 +234,16 @@ function evaluaRonda(rondaActual){
         if(numJugadores==2 && jugadorActual==nombreJ2){
             let puntosj2=parseInt(localStorage.getItem('puntosJug2'));
             localStorage.setItem('puntosJug2',puntosj2+puntaje);
-            botonUltimaRonda.className="btn btn2 visible";
+            botonUltimaRonda.style.display="inline";
         }else if(numJugadores==2 ){
             let puntosj1=parseInt(localStorage.getItem('puntosJug1'));
             localStorage.setItem('puntosJug1', puntosj1+puntaje);
             let botonSiguienteJugador=document.getElementById("proxJugador"); 
-            botonSiguienteJugador.className="btn btn2 visible";
+            botonSiguienteJugador.style.display="inline";
         }else{
             let puntosj1=parseInt(localStorage.getItem('puntosJug1'));
             localStorage.setItem('puntosJug1', puntosj1+puntaje);
-            botonUltimaRonda.className="btn btn2 visible";
+            botonUltimaRonda.style.display="inline";
         } 
     }else{
         let botonSiguienteRonda=document.getElementById("proxRonda");
@@ -255,7 +258,7 @@ function evaluaRonda(rondaActual){
             localStorage.setItem('rondaActual',parseInt(rondaActual));
         }
 
-        botonSiguienteRonda.className="btn btn2 visible";
+        botonSiguienteRonda.style.display="inline";
     }
 }
 
@@ -270,7 +273,7 @@ function proximoJugador(){
 
     let botonProxJugador=document.getElementById("proxJugador");
 
-    botonProxJugador.className="oculto";
+    botonProxJugador.style.display="none";
         
     nuevaPartida(1,nombreJ2);
 }
@@ -286,9 +289,9 @@ function verPuntuaciones(){
     let partida=document.getElementById("partida");
     let barraNav=document.getElementById("navBar");
     barraNav.style.display="none";
-    partida.className="oculto"
-    botonUltimaRonda.className="oculto";
-    divPuntajes.className="row visible";
+    partida.style.display="none"
+    botonUltimaRonda.style.display="none";
+    divPuntajes.style.display="inline";
 
     if(numJugadores!=1){
         let puntosJ2=parseInt(localStorage.getItem('puntosJug2'));

@@ -21,12 +21,6 @@ body{
     letter-spacing: 5px;
     white-space: pre;
 }
-.oculto{
-    display: none;
-}
-.visible{
-    display: inline;
-}
 
 label{
   font-size: large;
