@@ -1,0 +1,36 @@
+body{
+  background-image: url(imagenes/fondo.jpg);
+  background-size: 100% 100vh;
+}
+
+.btn{
+  border-width: 3px;
+  width: 250px;
+  height: 250px;
+}
+
+#btnAhorcado{
+  border-color: rgb(255, 39, 190);
+}
+#btnAhorcado:hover{
+  background-color: rgba(255, 39, 190,0.1);
+  color: rgb(255, 39, 190);
+}
+
+#btnAhorcado:active{
+  background-color: rgba(255, 255, 255);
+  color: black;
+}
+
+#btnPiPaTi{
+  border-color: rgba(22, 71, 22);
+}
+#btnPiPaTi:hover{
+  background-color: rgba(22, 71, 22,0.1);
+  color: rgba(22, 71, 22);
+}
+
+#btnPiPaTi:active{
+  background-color: rgba(255, 255, 255);
+  color: black;
+}
